@@ -20,6 +20,7 @@ otazip=ota_akb_"$stamp";
 device=$(sed -n 12p make.prop);
 cpu=$(sed -n 10p make.prop);
 imgt=$(sed -n 14p make.prop);
+loc=$(sed -n 18p make.prop);
 gcc=$(sed -n 16p make.prop);
 kernel="$imgt"_akb_"$stamp";
 export ARCH="$arch"
@@ -33,7 +34,8 @@ echo -e "$y User: "$usr"
  ARCH: "$arch"
  CPU: "$cpu"
  Device: "$device"
- Build time: "$stamp"";
+ Build time: "$stamp"
+ Kernel location: "$loc"";
 echo -e "$cy******************************$y"
 rm -rf out/akb_"$device"/include/generated/compile.h
 pwd > pwd.dat

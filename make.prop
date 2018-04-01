@@ -14,3 +14,5 @@ Spark
 Image.gz-dtb
 // GCC dir
 gcc4/bin/aarch64-linux-android-
+// Kernel location
+/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/boot
