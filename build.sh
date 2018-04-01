@@ -22,7 +22,7 @@ cpu=$(sed -n 10p make.prop);
 imgt=$(sed -n 14p make.prop);
 loc=$(sed -n 18p make.prop);
 gcc=$(sed -n 16p make.prop);
-sha="1"
+sha="0"
 if [[ "$sha" != "1" ]]
 then
 type="USER";
