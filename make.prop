@@ -1,0 +1,16 @@
+// YOUR NAME (a.k.a build user)
+fuldaros
+// ARCH (arm/arm64)
+arm64
+// DEFCONFIG NAME 
+porridge_pp_defconfig
+// BUILD HOST
+hhost
+// CPU
+mt6735
+// Device
+Spark
+// Image type (zImage/Image/Image.gz-dtb/...)
+Image.gz-dtb
+// GCC dir
+gcc4.9/bin/aarch64-linux-android-
