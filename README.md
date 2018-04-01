@@ -1,1 +1,1 @@
-## Automatic Bernel Builder(AKB) project v0.5
+## Automatic Kernel Builder(AKB) project v0.5
