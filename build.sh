@@ -22,6 +22,14 @@ cpu=$(sed -n 10p make.prop);
 imgt=$(sed -n 14p make.prop);
 loc=$(sed -n 18p make.prop);
 gcc=$(sed -n 16p make.prop);
+sha=$(sha1sum make.prop);
+echo "$sha";
+if [[ "$sha" != "14b64e40580cec748efd60e3a2211749b4020436  make.prop" ]]
+then
+type="USER";
+else
+type="OFFICIAL";
+fi
 kernel="$imgt"_akb_"$stamp";
 export ARCH="$arch"
 export TARGET_ARCH="$arch"
@@ -35,7 +43,8 @@ echo -e "$y User: "$usr"
  CPU: "$cpu"
  Device: "$device"
  Build time: "$stamp"
- Kernel location: "$loc"";
+ Kernel location: "$loc"
+ Build type: "$type"";
 echo -e "$cy******************************$y"
 rm -rf out/akb_"$device"/include/generated/compile.h
 pwd > pwd.dat
@@ -67,6 +76,7 @@ cat ../make.prop > author.prop
 echo -e "//BUILD TIME" "\n""$stampt" >> author.prop
 echo -e "// Automatic kernel builder ver. (DONT EDIT)" >> author.prop
 echo -e "$ver" >> author.prop
+echo -e "//BUILD TYPE" "\n""$type" >> author.prop
 zip -r ../outzip/"$otazip".zip *
 echo -e "$g Поздравляем, Соедененные Штаты Америки стерты с лица земли.
  Подробности в этом архиве. "$otazip".zip$y"
@@ -77,3 +87,4 @@ end=$(date +"%s")
 diff=$(( $end - $strt ))
 echo Операция выполнена успешно!
 echo -e "$m Полет Тополь-M до цели занял "$diff" секунд!"
+####### script v08 (beta)

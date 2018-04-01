@@ -25,3 +25,4 @@ cd sources
 make O=../out/akb_"$device" "$conf"
 cd ../
 ./build.sh
+####### script v1.2 (stable)
