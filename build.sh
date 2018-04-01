@@ -22,9 +22,8 @@ cpu=$(sed -n 10p make.prop);
 imgt=$(sed -n 14p make.prop);
 loc=$(sed -n 18p make.prop);
 gcc=$(sed -n 16p make.prop);
-sha=$(sha1sum make.prop);
-echo "$sha";
-if [[ "$sha" != "14b64e40580cec748efd60e3a2211749b4020436  make.prop" ]]
+sha="1"
+if [[ "$sha" != "1" ]]
 then
 type="USER";
 else
