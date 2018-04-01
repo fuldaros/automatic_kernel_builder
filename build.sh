@@ -35,7 +35,7 @@ echo -e "$y User: "$usr"
  Device: "$device"
  Build time: "$stamp"";
 echo -e "$cy******************************$y"
-rm -rf out/paperplane/include/generated/compile.h
+rm -rf out/akb_"$device"/include/generated/compile.h
 pwd > pwd.dat
 read pwd < pwd.dat
 rm -f pwd.dat
@@ -44,7 +44,7 @@ cd sources/
 echo -e "$g Внимание, подождите. Наводим Тополь-M на Соедененные Штаты Америки.
  Терпения, друзья! :3$y"
 strt=$(date +"%s")
-make -j3 O=../out/paperplane "$imgt" > ../outkernel/"$logb"
+make -j3 O=../out/akb_"$device" "$imgt" > ../outkernel/"$logb"
 clear
 echo -e "
 $cy****************************************************
@@ -53,8 +53,8 @@ $cy*                   by fuldaros                    *
 $cy****************************************************
 $y";  
 echo -e "$g Идет обратый отсчет.$y"
-cat ../out/paperplane/arch/"$arch"/boot/"$imgt" > ../outkernel/"$kernel"
-rm -rf ../out/paperplane/arch/"$arch"/boot/
+cat ../out/akb_"$device"/arch/"$arch"/boot/"$imgt" > ../outkernel/"$kernel"
+rm -rf ../out/akb_"$device"/arch/"$arch"/boot/
 cd ../
 echo -e "$g Пуск. Тополь-М приближается к цели...$y"
 rm -f otagen/zImage

@@ -13,4 +13,4 @@ Spark
 // Image type (zImage/Image/Image.gz-dtb/...)
 Image.gz-dtb
 // GCC dir
-gcc4.9/bin/aarch64-linux-android-
+gcc4/bin/aarch64-linux-android-
